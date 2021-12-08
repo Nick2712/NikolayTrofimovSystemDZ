@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/DZ3.unity
     guid: 52b5f811041f878448e5700c77e713c4
+  - enabled: 1
+    path: Assets/Scenes/DZ4/DZ4_StartScene.unity
+    guid: 8beeca29b940d774aa2d1495f2887062
+  - enabled: 1
+    path: Assets/Scenes/DZ4/DZ4_HLAPIScene.unity
+    guid: 247480dfdd10e6f4a9c7e1b77c81f3f1
   m_configObjects: {}
