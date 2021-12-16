@@ -15,7 +15,11 @@ namespace NikolayTrofimovDZ5
         public string PlayerName
         {
             get => _playerName;
-            set => _playerName = value;
+            set
+            {
+                _playerName = value;
+                gameObject.name = value;
+            }
         }
 
         protected override float Speed => _shipSpeed;
@@ -36,7 +40,6 @@ namespace NikolayTrofimovDZ5
         {
             _rigidBody = GetComponent<Rigidbody>();
             if (_rigidBody == null) return;
-            gameObject.name = _playerName;
             _cameraOrbit = FindObjectOfType<CameraOrbit>();
             _cameraOrbit.Initiate(_cameraAttach == null ? transform : _cameraAttach);
             _playerLabel = GetComponentInChildren<PlayerLabel>();

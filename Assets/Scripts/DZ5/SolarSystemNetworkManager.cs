@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -14,7 +15,15 @@ namespace NikolayTrofimovDZ5
 
             var player = Instantiate(playerPrefab, spawnTransform.position, spawnTransform.rotation);
             player.GetComponent<ShipController>().PlayerName = _playerName;
+
             NetworkServer.AddPlayerForConnection(conn, player, playerControllerId);
+        }
+
+        
+
+        public void OnPlayerNameChanged(string value)
+        {
+            _playerName = value;
         }
     }
 }
